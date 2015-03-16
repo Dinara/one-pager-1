@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Gamer by Choice</title>
+  <title>Gamezz</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static "css/style.css"%}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#featured">The <span class="subhead">SteamPunk</span></a>            
+          <a class="navbar-brand" href="#featured">The <span class="subhead">Steam</span></a>            
         </div><!-- navbar-header -->
         <div class="collapse navbar-collapse" id="collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -118,23 +118,37 @@
     <div class="container">
         <h2 id="games_table">Complete Game List</h2>
         <div class="row">
-
+            <p>This table will be used to show all of my steam game collection sorted by names. Each game is an object passed by <b>home(request)</b>  function in <i>frontpage/views.py</i>. But it doesn't work. Django brings up an OperationalError saying that <b>frontpage_game.tag1</b> column does not exist. 
+              Code used:
+                  <br>
+                  <b> for game in games </b>
+                  <br>
+                  <b> <td> game.name </td> </b>
+                  <br>
+                  <b> <td> game.tag1 </td> </b>
+                  <br>
+                  <b> endfor </b>
+                  <br>
+            With {{  around game.name and game.tag1 and {% around for loop declaration. 
+            <br>
+            Also, two search bars will go into this container. One to search by game name, the other - by genre.
+            </p>
             <table class="table table-hover table-bordered">
+              
             <thead>
             <tr>
-              <th>{{genre}}</th>
-              <th>{genre}}</th>
+              <th>Game</th>
+              <th>Genre</th>
               </tr>           
             </thead>
 
-            <tbody>
             
-            <tr>
-                <td>{{ genre }}</td>
-                <td>{{ genre }}</td>
+            <tbody>
+            <tr>           
+                <td>game 1 name</td>
+                <td>game 1 genre</t>
             </tr>
-
-            </tbody>
+            </tbody>           
             </table>
         </div><!-- row -->     
     </div><!-- container -->
@@ -142,6 +156,7 @@
 
   <div class="page" id="reviews">
     <div class="container">
+      <p>This section will display new articles from the websites I subscribe to. <br> Temporarily, set to store video game reviews.</p>
         <h2>Video Game Reviews</h2>
         <div class="row">
             <blockquote class="col-sm-6" id="reviewer">
@@ -156,7 +171,7 @@
               <div class="quote">
                 <span class="intro">Timeam salutatus ex sea, nam no simul persequeris definitiones, ne mea unum altera appetere. </span>
                 <span class="more">Alienum inimicus abhorreant at nec, eum id dicunt timeam. Quo no velit iuvaret incorrupte, habeo commodo ei sit. Ex facete oporteat tincidunt vel, amet fuisset scaevola duo ea. Omnium delicata patrioque in pro, cu natum copiosae quo, in his vide tantas consetetur. Eam at sale dignissim, fastidii accumsan at duo.</span>
-                <span class="customer">Corporate-paid reviewer# 1</span>
+                <span class="customer">Corporate-paid reviewer# 2</span>
               </div>
             </blockquote>
 
@@ -164,7 +179,7 @@
               <div class="quote">
                 <span class="intro">Timeam salutatus ex sea, nam no simul persequeris definitiones, ne mea unum altera appetere. </span>
                 <span class="more">Alienum inimicus abhorreant at nec, eum id dicunt timeam. Quo no velit iuvaret incorrupte, habeo commodo ei sit. Ex facete oporteat tincidunt vel, amet fuisset scaevola duo ea. Omnium delicata patrioque in pro, cu natum copiosae quo, in his vide tantas consetetur. Eam at sale dignissim, fastidii accumsan at duo.</span>
-                <span class="customer">Adam the Reviewer</span>
+                <span class="customer">Person 3</span>
               </div>
             </blockquote>
 
@@ -172,7 +187,7 @@
               <div class="quote">
                 <span class="intro">Timeam salutatus ex sea, nam no simul persequeris definitiones, ne mea unum altera appetere. </span>
                 <span class="more">Alienum inimicus abhorreant at nec, eum id dicunt timeam. Quo no velit iuvaret incorrupte, habeo commodo ei sit. Ex facete oporteat tincidunt vel, amet fuisset scaevola duo ea. Omnium delicata patrioque in pro, cu natum copiosae quo, in his vide tantas consetetur. Eam at sale dignissim, fastidii accumsan at duo.</span>
-                <span class="customer">Dika Chu</span>
+                <span class="customer">Person 4</span>
               </div>
             </blockquote>        
         </div><!-- row -->
@@ -186,7 +201,6 @@
           <nav class="navbar navbar-inverse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Thanks for visiting</a></li>
-              <li><a href="#">Privacy policy</a></li>
             </ul>
           </nav>           
         </div><!-- row -->
